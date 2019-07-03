@@ -1,0 +1,49 @@
+{
+  "name": "taskforce-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:taskforcesh/taskforce-proxy.git",
+  "author": "Manuel Astudillo <manuel@optimalbits.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon src/index.ts",
+    "start": "tsc && node dist/index.js",
+    "test": "tsc && node dist/lib/test/test.js"
+  },
+  "dependencies": {
+    "@taskforcesh/message-broker": "^1.0.1",
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.11",
+    "strict-event-emitter-types": "^2.0.0",
+    "ws": "^7.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@types/bull": "^3.5.14",
+    "@types/chalk": "^2.2.0",
+    "@types/lodash": "^4.14.134",
+    "@types/node": "^12.0.0",
+    "@types/ws": "^6.0.1",
+    "husky": "^2.4.1",
+    "nodemon": "^1.19.1",
+    "semantic-release": "^15.13.16",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.4.5"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "release": {
+    "branch": "next",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm"
+    ]
+  }
+}
