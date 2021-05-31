@@ -15,7 +15,7 @@
   "dependencies": {
     "@taskforcesh/message-broker": "^1.0.1",
     "chalk": "^2.4.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "strict-event-emitter-types": "^2.0.0",
     "ws": "^7.4.6"
   },
